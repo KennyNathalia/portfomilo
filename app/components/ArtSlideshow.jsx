@@ -19,15 +19,15 @@ export default function Slideshow({ imageNames, folder }) {
 
   return (
     <div className="w-full max-w-md mx-auto">
-      <Slider {...settings}>
+      <Slider {...settings} className="custom-slider">
         {imageNames.map((name, i) => (
           <div key={i} className="px-2">
             <Image
               src={`/${folder}/${name}`}
               alt={`${folder} ${i + 1}`}
-              width={600}
-              height={380}
-              className="rounded-xl object-cover w-full h-auto"
+              width={400}  
+              height={300}  
+              className="rounded-xl object-contain w-full h-[300px] mx-auto mb-20"
               priority
             />
           </div>
