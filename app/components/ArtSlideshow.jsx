@@ -23,7 +23,7 @@ export default function Slideshow({ imageNames, folder }) {
         {imageNames.map((name, i) => (
           <div key={i} className="px-2">
             <Image
-              src={`/${folder}/${name}.jpg`}
+              src={`/${folder}/${name}`}
               alt={`${folder} ${i + 1}`}
               width={600}
               height={380}
