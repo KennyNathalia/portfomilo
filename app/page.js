@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import Footer from "@components/Footer";
 import Logo from "@components/Logo";
@@ -6,23 +5,6 @@ import Logo from "@components/Logo";
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <div className="hidden lg:block absolute left-20 top-1/2 transform -translate-y-1/2">
-        <Image
-          src="/sidelogo.jpg"
-          alt="Left Art"
-          width={200}
-          height={400}
-        />
-      </div>
-
-      <div className="hidden lg:block absolute right-20 top-1/2 transform -translate-y-1/2">
-        <Image
-          src="/sidelogo.jpg" 
-          alt="Right Art"
-          width={200}
-          height={400}
-        />
-      </div>
 
       <main className="flex flex-col gap-[32px] row-start-2 items-center">
         <Logo />
