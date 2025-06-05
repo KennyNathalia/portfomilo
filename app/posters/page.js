@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-16 p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-    <Logo />
+    <Logo width={200} height={22} />
 
       <div>
         <ArtSlideshow imageNames={imageNames} folder={folder} />
