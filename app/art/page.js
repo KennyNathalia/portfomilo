@@ -1,4 +1,3 @@
-// app/art/page.jsx
 import fs from "fs";
 import path from "path";
 import ArtPageClient from "@components/ArtPageClient";
