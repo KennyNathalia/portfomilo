@@ -4,8 +4,7 @@ export default function Logo({ width = 350, height = 38, className = "" }) {
   return (
     <a
       className={`flex items-center gap-2 hover:underline hover:underline-offset-4 ${className}`}
-      href="https://www.instagram.com/portfomilo/"
-      target="_blank"
+      href="/"
       rel="noopener noreferrer"
     >
       <Image
