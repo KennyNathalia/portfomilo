@@ -13,7 +13,7 @@ export default function Slideshow({ imageNames, folder }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 4000,
     arrows: false,
   };
 
