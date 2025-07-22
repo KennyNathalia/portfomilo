@@ -2,17 +2,30 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Masonry from "react-masonry-css";
 
 export default function Grid({ imageData, folder }) {
     const [selectedImage, setSelectedImage] = useState(null);
 
+    const breakpointColumnsObj = {
+        default: 4,
+        1100: 3,
+        700: 2,
+        0: 1 // Als je absoluut één kolom wilt onder 400px bijv.
+    };
+
+
     return (
         <>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <Masonry
+                breakpointCols={breakpointColumnsObj}
+                className="flex gap-4 w-auto"
+                columnClassName="masonry-column"
+            >
                 {imageData.map((image, i) => (
                     <div
                         key={i}
-                        className="relative w-full aspect-[4/3] cursor-pointer"
+                        className="mb-4 cursor-pointer"
                         onClick={() => setSelectedImage(image)}
                     >
                         <Image
@@ -20,17 +33,17 @@ export default function Grid({ imageData, folder }) {
                             alt={image.title}
                             width={400}
                             height={300}
-                            className="object-cover rounded-xl"
+                            className="rounded-xl object-cover w-full h-auto max-w-[350px] mx-auto"
                             sizes="(max-width: 768px) 100vw, 25vw"
                             priority={i === 0}
                         />
                     </div>
                 ))}
-            </div>
+            </Masonry>
 
             {selectedImage && (
                 <div
-                    className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50"
+                    className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50 no-scrollbar"
                     onClick={() => setSelectedImage(null)}
                 >
                     <div
