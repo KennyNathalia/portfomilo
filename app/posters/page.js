@@ -1,14 +1,19 @@
-import fs from "fs";
-import path from "path";
+import fs from 'fs';
+import path from 'path';
 import PosterPageClient from "@components/PosterPageClient";
+import posterData from "../data/posterData";
 
 export default function PosterPage() {
   const folder = "posters";
-  const dirPath = path.join(process.cwd(), "public", folder);
-  const files = fs.readdirSync(dirPath);
-  const imageNames = files.filter((file) =>
-    file.match(/\.(jpg|jpeg|png|webp)$/i)
+  const dirPath = path.join(process.cwd(), 'public', folder);
+
+  // Does it exist?
+  const existingFiles = fs.readdirSync(dirPath)
+    .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file));
+
+  const availableImages = posterData.filter(item => 
+    existingFiles.includes(item.name)
   );
 
-  return <PosterPageClient imageNames={imageNames} folder={folder} />;
+  return <PosterPageClient imageData={availableImages} folder={folder} />;
 }

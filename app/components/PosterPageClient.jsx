@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import ArtSlideshow from "@components/ArtSlideshow";
-import Footer from "@components/Footer";
-import Logo from "@components/Logo";
-import Grid from "@components/GridVisual";
+import ArtSlideshow from "./ArtSlideshow";
+import Footer from "./Footer";
+import Logo from "./Logo";
+import Grid from "./GridVisual";
 
-export default function ArtPageClient({ imageNames, folder }) {
+export default function PosterPageClient({ imageData, folder }) {
   const [view, setView] = useState("grid");
 
   return (
@@ -29,8 +29,8 @@ export default function ArtPageClient({ imageNames, folder }) {
       </div>
 
       <div>
-        {view === "grid" && <Grid imageNames={imageNames} folder={folder} />}
-        {view === "slideshow" && <ArtSlideshow imageNames={imageNames} folder={folder} />}
+        {view === "grid" && <Grid imageData={imageData} folder={folder} />}
+        {view === "slideshow" && <ArtSlideshow imageData={imageData} folder={folder} />}
       </div>
 
       <Footer />

@@ -6,11 +6,10 @@ import Footer from "@components/Footer";
 import Logo from "@components/Logo";
 import Grid from "@components/GridVisual";
 
-export default function ArtPageClient({ imageNames, folder }) {
+export default function ArtPageClient({ imageData, folder }) {
   const [view, setView] = useState("grid");
 
-  console.log("imageNames:", imageNames);
-
+  console.log("imageData:", imageData);
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -32,8 +31,8 @@ export default function ArtPageClient({ imageNames, folder }) {
       </div>
 
       <div>
-        {view === "grid" && <Grid imageNames={imageNames} folder={folder} />}
-        {view === "slideshow" && <ArtSlideshow imageNames={imageNames} folder={folder} />}
+        {view === "grid" && <Grid imageData={imageData} folder={folder} />}
+        {view === "slideshow" && <ArtSlideshow imageData={imageData} folder={folder} />}
       </div>
 
       <Footer />
