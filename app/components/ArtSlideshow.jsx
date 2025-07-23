@@ -30,7 +30,7 @@ export default function Slideshow({ imageData, folder }) {
               className="rounded-xl object-contain w-full h-[300px] mx-auto mb-20"
               priority={i === 0}
             />
-            <h2 className="text-center mt-2 text-lg font-semibold">{image.title}</h2>
+            {/* <h2 className="text-center mt-2 text-lg font-semibold">{image.title}</h2> */}
           </div>
         ))}
 
