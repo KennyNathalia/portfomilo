@@ -46,7 +46,7 @@ export default function Grid({ imageData, folder }) {
                 {imageData.map((image, i) => (
                     <div
                         key={i}
-                        className="mb-4 cursor-pointer"
+                        className="mb-4 cursor-pointer bg-neutral-100 rounded-xl p-2 transition hover:scale-[1.01]"
                         onClick={() => setSelectedIndex(i)}
                     >
                         <Image
@@ -54,7 +54,7 @@ export default function Grid({ imageData, folder }) {
                             alt={image.title}
                             width={400}
                             height={300}
-                            className="rounded-xl object-cover w-full h-auto max-w-[350px] mx-auto"
+                            className="rounded-lg object-cover w-full h-auto max-w-[350px] mx-auto"
                             sizes="(max-width: 768px) 100vw, 25vw"
                             priority={i === 0}
                         />
