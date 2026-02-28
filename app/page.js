@@ -12,15 +12,15 @@ export default function Home() {
           <span className="text-center">Digital Art Gallery by MUDA MILO</span>
         </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        <div className="flex gap-2 items-center flex-row justify-center">
           <Link
-            className="bg-yellow-500 rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent hover:text-black dark:hover:text-white font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
+            className="bg-yellow-500 rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent hover:text-black dark:hover:text-white font-medium text-base h-12 px-6 w-auto min-w-[140px] sm:w-[158px]"
             href="/art"
           >
             Art
           </Link>
           <Link
-            className="bg-yellow-500 rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent hover:text-black dark:hover:text-white font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
+            className="bg-yellow-500 rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent hover:text-black dark:hover:text-white font-medium text-base h-12 px-6 w-auto min-w-[140px] sm:w-[158px]"
             href="/posters"
           >
             Posters
